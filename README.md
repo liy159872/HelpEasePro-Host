@@ -17,6 +17,8 @@
 
 此项目使用 **SpringBoot+SpringCloud** 进行编写：<https://github.com/liy159872/HelpEasePro-Host>
 
+HelpEasePro是基于Spring+Vue的社交求助平台。通过简单易用的界面和聚集各领域专业人士，提供高质量的解决方案。具备详细标签分类、学校社区分开、信用积分、Redis缓存等功能，提高系统性能和可扩展性。致力于提供快捷、高效、可信赖的求助渠道，让用户能够及时获得所需的帮助和支持。
+
 **SpringBoot** 是一个基于Spring框架的快速开发、简化配置的微服务框架。
 **SpringCloud** 是一个基于SpringBoot的开发工具箱，提供了一系列组件和开发工具，帮助开发者快速构建、配置和管理分布式系统应用。
 
