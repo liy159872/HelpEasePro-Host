@@ -3,7 +3,7 @@ package com.oddfar.campus.framework.api.file;
 /**
  * 媒体类型工具类
  *
- * @author ruoyi
+ * @author LiYi
  */
 public class MimeTypeUtils {
     public static final String IMAGE_PNG = "image/png";

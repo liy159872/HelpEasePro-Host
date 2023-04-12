@@ -6,7 +6,7 @@ import com.oddfar.campus.common.utils.StringUtils;
 /**
  * 分页数据
  *
- * @author ruoyi
+ * @author LiYi
  */
 public class PageDomain {
     /**

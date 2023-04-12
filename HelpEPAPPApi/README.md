@@ -122,7 +122,7 @@ HelpEasePro-App = Spring Boot后端 + Vue管理员前端 + 微信小程序用户
 
 ## 开发计划
 
-当前版本[v03.2.0](https://github.com/liy159872/HelpEasePro-Host)
+当前版本[v04.0.0](https://github.com/liy159872/HelpEasePro-Host)
 
 目前项目开发中，存在诸多不足，以下是目前规划的开发计划。
 

@@ -3,7 +3,7 @@ package com.oddfar.campus.common.domain.model;
 /**
  * 用户登录对象
  *
- * @author ruoyi
+ * @author LiYi
  */
 public class LoginBody {
     /**

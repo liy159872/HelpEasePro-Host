@@ -16,8 +16,8 @@ import java.nio.file.Path;
 import java.util.stream.Stream;
 
 /**
- * @author Yogeek
- * @date 2018/7/16 16:10
+ * @author LiYi
+ * @date 2023/4/16 16:10
  * @decrpt 阿里云对象存储服务
  */
 public class AliyunStorage implements Storage {

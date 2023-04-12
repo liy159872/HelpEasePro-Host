@@ -4,8 +4,8 @@ package com.oddfar.campus.common.utils;
 
 /**
  * 路由显示信息
- * 
- * @author ruoyi
+ *
+ * @author LiYi
  */
 public class MetaVo
 {

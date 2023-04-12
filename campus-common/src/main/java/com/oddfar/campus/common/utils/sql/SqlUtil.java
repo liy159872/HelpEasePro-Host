@@ -5,8 +5,8 @@ import com.oddfar.campus.common.utils.StringUtils;
 
 /**
  * sql操作工具类
- * 
- * @author ruoyi
+ *
+ * @author LiYi
  */
 public class SqlUtil
 {

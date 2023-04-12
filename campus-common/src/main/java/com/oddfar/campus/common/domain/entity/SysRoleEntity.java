@@ -17,7 +17,7 @@ import java.util.Set;
 /**
  * 角色表 sys_role
  *
- * @author ruoyi
+ * @author LiYi
  */
 @TableName("sys_role")
 @EqualsAndHashCode(callSuper = true)

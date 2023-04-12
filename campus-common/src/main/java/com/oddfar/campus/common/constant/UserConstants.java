@@ -3,7 +3,7 @@ package com.oddfar.campus.common.constant;
 /**
  * 用户常量信息
  *
- * @author ruoyi
+ * @author LiYi
  */
 public class UserConstants {
     /**

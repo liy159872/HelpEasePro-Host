@@ -3,7 +3,7 @@ package com.oddfar.campus.common.constant;
 /**
  * 返回状态码
  *
- * @author ruoyi
+ * @author LiYi
  */
 public class HttpStatus {
     /**

@@ -46,7 +46,7 @@ CREATE TABLE `litemall_ad` (
 
 LOCK TABLES `litemall_ad` WRITE;
 /*!40000 ALTER TABLE `litemall_ad` DISABLE KEYS */;
-INSERT INTO `litemall_ad` VALUES (1,'合作 谁是你的守护者','','https://i.328888.xyz/2023/03/29/ik7cXF.jpeg',1,'合作 谁是你的守护者',NULL,NULL,1,'2018-02-01 00:00:00','2018-02-01 00:00:00',0),(2,'互助 一起变美','','https://i.328888.xyz/2023/03/29/ik7RCZ.jpeg',1,'互助 一起变美',NULL,NULL,1,'2018-02-01 00:00:00','2018-02-01 00:00:00',0),(3,'求助 相信我们','','https://i.328888.xyz/2023/03/29/ik7mKH.jpeg',1,'求助 相信我们',NULL,NULL,1,'2018-02-01 00:00:00','2018-02-01 00:00:00',0);
+INSERT INTO `litemall_ad` VALUES (1,'合作 谁是你的守护者','','https://i.328888.xyz/2023/03/29/ik7cXF.jpeg',1,'合作 谁是你的守护者',NULL,NULL,1,'2023-02-01 00:00:00','2023-02-01 00:00:00',0),(2,'互助 一起变美','','https://i.328888.xyz/2023/03/29/ik7RCZ.jpeg',1,'互助 一起变美',NULL,NULL,1,'2023-02-01 00:00:00','2023-02-01 00:00:00',0),(3,'求助 相信我们','','https://i.328888.xyz/2023/03/29/ik7mKH.jpeg',1,'求助 相信我们',NULL,NULL,1,'2023-02-01 00:00:00','2023-02-01 00:00:00',0);
 /*!40000 ALTER TABLE `litemall_ad` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -114,7 +114,7 @@ CREATE TABLE `litemall_admin` (
 
 LOCK TABLES `litemall_admin` WRITE;
 /*!40000 ALTER TABLE `litemall_admin` DISABLE KEYS */;
-INSERT INTO `litemall_admin` VALUES (1,'admin','$2a$10$3yLETB.sg37oS97KCbuPROf1uD33WXO4nkxLS.lvua4Mpv9tq7MFe',NULL,NULL,'https://www.hualigs.cn/image/6411b19fa47ea.jpg','2018-02-01 00:00:00','2018-02-01 00:00:00',0,'[1]'),(4,'LJHX5470','$2a$10$3yLETB.sg37oS97KCbuPROf1uD33WXO4nkxLS.lvua4Mpv9tq7MFe','',NULL,'https://www.hualigs.cn/image/6411b246da80e.jpg','2019-01-07 15:16:59','2019-01-07 15:17:34',0,'[3]'),(5,'mall','$2a$10$3yLETB.sg37oS97KCbuPROf1uD33WXO4nkxLS.lvua4Mpv9tq7MFe','',NULL,'https://www.hualigs.cn/image/6421878fd82a0.jpg','2019-01-07 15:17:25','2019-01-07 15:21:05',0,'[2]');
+INSERT INTO `litemall_admin` VALUES (1,'admin','$2a$10$3yLETB.sg37oS97KCbuPROf1uD33WXO4nkxLS.lvua4Mpv9tq7MFe',NULL,NULL,'https://www.hualigs.cn/image/6411b19fa47ea.jpg','2023-02-01 00:00:00','2018-02-01 00:00:00',0,'[1]'),(4,'LJHX5470','$2a$10$3yLETB.sg37oS97KCbuPROf1uD33WXO4nkxLS.lvua4Mpv9tq7MFe','',NULL,'https://www.hualigs.cn/image/6411b246da80e.jpg','2019-01-07 15:16:59','2019-01-07 15:17:34',0,'[3]'),(5,'mall','$2a$10$3yLETB.sg37oS97KCbuPROf1uD33WXO4nkxLS.lvua4Mpv9tq7MFe','',NULL,'https://www.hualigs.cn/image/6421878fd82a0.jpg','2019-01-07 15:17:25','2019-01-07 15:21:05',0,'[2]');
 /*!40000 ALTER TABLE `litemall_admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
