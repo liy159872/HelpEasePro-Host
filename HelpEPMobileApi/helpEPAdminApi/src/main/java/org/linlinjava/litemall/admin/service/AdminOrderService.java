@@ -5,6 +5,7 @@ import com.github.binarywang.wxpay.bean.request.WxPayRefundRequest;
 import com.github.binarywang.wxpay.bean.result.WxPayRefundResult;
 import com.github.binarywang.wxpay.exception.WxPayException;
 import com.github.binarywang.wxpay.service.WxPayService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.linlinjava.litemall.core.notify.NotifyService;
@@ -32,7 +33,7 @@ import static org.linlinjava.litemall.admin.util.AdminResponseCode.*;
 import static org.linlinjava.litemall.admin.util.AdminResponseCode.ORDER_PAY_FAILED;
 
 @Service
-
+@Slf4j
 public class AdminOrderService {
     private final Log logger = LogFactory.getLog(AdminOrderService.class);
 
@@ -208,6 +209,8 @@ public class AdminOrderService {
         if (!order.getOrderStatus().equals(OrderUtil.STATUS_PAY)) {
             return ResponseUtil.fail(ORDER_CONFIRM_NOT_ALLOWED, "订单不能确认收货");
         }
+
+        log.debug("Entering doSomething");
 
         order.setOrderStatus(OrderUtil.STATUS_SHIP);
         order.setShipSn(shipSn);

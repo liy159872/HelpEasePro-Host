@@ -52,7 +52,7 @@ public class OrderUtil {
         }
 
         if (status == 202) {
-            return "订单取消，退款中";
+            return "榜单取消，退款中";
         }
 
         if (status == 203) {
@@ -60,19 +60,19 @@ public class OrderUtil {
         }
 
         if (status == 204) {
-            return "已超时团购";
+            return "已超时团援助";
         }
 
         if (status == 301) {
-            return "已发货";
+            return "援助中";
         }
 
         if (status == 401) {
-            return "已收货";
+            return "已完成";
         }
 
         if (status == 402) {
-            return "已收货(系统)";
+            return "已完成(系统)";
         }
 
         throw new IllegalStateException("orderStatus不支持");

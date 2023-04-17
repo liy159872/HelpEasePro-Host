@@ -140,7 +140,7 @@ public class WxCartController {
         if (existCart == null) {
             //取得规格的信息,判断规格库存
             if (product == null || number > product.getNumber()) {
-                return ResponseUtil.fail(GOODS_NO_STOCK, "库存不足");
+                return ResponseUtil.fail(GOODS_NO_STOCK, "援助人数已满");
             }
 
             cart.setId(null);
@@ -161,7 +161,7 @@ public class WxCartController {
             //取得规格的信息,判断规格库存
             int num = existCart.getNumber() + number;
             if (num > product.getNumber()) {
-                return ResponseUtil.fail(GOODS_NO_STOCK, "库存不足");
+                return ResponseUtil.fail(GOODS_NO_STOCK, "援助人数已满");
             }
             existCart.setNumber((short) num);
             if (cartService.updateById(existCart) == 0) {
@@ -214,7 +214,7 @@ public class WxCartController {
         if (existCart == null) {
             //取得规格的信息,判断规格库存
             if (product == null || number > product.getNumber()) {
-                return ResponseUtil.fail(GOODS_NO_STOCK, "库存不足");
+                return ResponseUtil.fail(GOODS_NO_STOCK, "援助人数已满");
             }
 
             cart.setId(null);
@@ -235,7 +235,7 @@ public class WxCartController {
             //取得规格的信息,判断规格库存
             int num = number;
             if (num > product.getNumber()) {
-                return ResponseUtil.fail(GOODS_NO_STOCK, "库存不足");
+                return ResponseUtil.fail(GOODS_NO_STOCK, "援助人数已满");
             }
             existCart.setNumber((short) num);
             if (cartService.updateById(existCart) == 0) {
@@ -293,7 +293,7 @@ public class WxCartController {
         //取得规格的信息,判断规格库存
         LitemallGoodsProduct product = productService.findById(productId);
         if (product == null || product.getNumber() < number) {
-            return ResponseUtil.fail(GOODS_UNSHELVE, "库存不足");
+            return ResponseUtil.fail(GOODS_UNSHELVE, "援助人数已满");
         }
 
         existCart.setNumber(number.shortValue());

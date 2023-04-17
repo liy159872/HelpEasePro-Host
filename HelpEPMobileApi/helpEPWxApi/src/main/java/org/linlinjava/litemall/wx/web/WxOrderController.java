@@ -1,5 +1,6 @@
 package org.linlinjava.litemall.wx.web;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.linlinjava.litemall.core.validator.Order;
@@ -17,6 +18,7 @@ import javax.validation.constraints.NotNull;
 @RestController
 @RequestMapping("/wx/order")
 @Validated
+@Slf4j
 public class WxOrderController {
     private final Log logger = LogFactory.getLog(WxOrderController.class);
 
@@ -102,6 +104,22 @@ public class WxOrderController {
     @PostMapping("h5pay")
     public Object h5pay(@LoginUser Integer userId, @RequestBody String body, HttpServletRequest request) {
         return wxOrderService.h5pay(userId, body, request);
+    }
+
+    /**
+     * H5模拟支付
+     *
+     * @param userId
+     * @param body
+     * @return
+     */
+    @PostMapping("simulationpay")
+    public Object simulationpay(@LoginUser Integer userId, @RequestBody String body) {
+        log.debug("段三--段三--段三--段三--段三--段三--");
+        log.debug("User:",userId);
+        log.debug("段三--段三--段三--段三--段三--段三--");
+        log.debug("body:",body);
+        return wxOrderService.simulationpay(userId, body);
     }
 
     /**

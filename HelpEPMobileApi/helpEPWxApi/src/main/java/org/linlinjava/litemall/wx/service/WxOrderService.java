@@ -9,6 +9,7 @@ import com.github.binarywang.wxpay.bean.result.BaseWxPayResult;
 import com.github.binarywang.wxpay.constant.WxPayConstants;
 import com.github.binarywang.wxpay.exception.WxPayException;
 import com.github.binarywang.wxpay.service.WxPayService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -66,6 +67,7 @@ import static org.linlinjava.litemall.wx.util.WxResponseCode.*;
  * 当402系统自动确认收货以后，此时用户可以删除订单，评价商品，申请售后，或者再次购买
  */
 @Service
+@Slf4j
 public class WxOrderService {
     private final Log logger = LogFactory.getLog(WxOrderService.class);
 
@@ -657,6 +659,47 @@ public class WxOrderService {
             return ResponseUtil.updatedDateExpired();
         }
         return ResponseUtil.ok(result);
+    }
+
+    /**
+     * H5模拟支付
+     *
+     * @param userId
+     * @param body
+     * @return
+     */
+    @Transactional
+    public Object simulationpay(Integer userId, String body) {
+        if (userId == null) {
+            return ResponseUtil.unlogin();
+        }
+        Integer orderId = JacksonUtil.parseInteger(body, "orderId");
+        if (orderId == null) {
+            return ResponseUtil.badArgument();
+        }
+
+        LitemallOrder order = orderService.findById(userId, orderId);
+        if (order == null) {
+            return ResponseUtil.badArgument();
+        }
+        if (!order.getUserId().equals(userId)) {
+            return ResponseUtil.badArgumentValue();
+        }
+
+        OrderHandleOption handleOption = OrderUtil.build(order);
+//        if (!handleOption.isConfirm()) {
+//            return ResponseUtil.fail(ORDER_INVALID_OPERATION, "订单不能确认收货");
+//        }
+
+        Short comments = orderGoodsService.getComments(orderId);
+        order.setComments(comments);
+
+        order.setOrderStatus(OrderUtil.STATUS_SHIP);
+        order.setConfirmTime(LocalDateTime.now());
+        if (orderService.updateWithOptimisticLocker(order) == 0) {
+            return ResponseUtil.updatedDateExpired();
+        }
+        return ResponseUtil.ok();
     }
 
     /**

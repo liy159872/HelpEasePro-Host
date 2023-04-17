@@ -40,8 +40,8 @@ public class AdminSwagger2Configuration {
         return new ApiInfoBuilder()
                 .title("litemall-admin API")
                 .description("litemall管理后台API")
-                .termsOfServiceUrl("https://github.com/linlinjava/litemall")
-                .contact("https://github.com/linlinjava/litemall")
+                .termsOfServiceUrl("https://gitee.com/liyiaixuemei")
+                .contact("https://github.com/liy159872?tab=repositories")
                 .version("1.0")
                 .build();
     }
