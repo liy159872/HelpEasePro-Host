@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: litemall
+-- Host: 127.0.0.1    Database: HelpEasePro-Mobile
 -- ------------------------------------------------------
 -- Server version	5.7.21-log
 
@@ -14,6 +14,10 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--  author                ：李文国
+
+--  Date: 26/02/2023 14:37:09
 
 drop database if exists HelpEaseProMobile;
 drop user if exists 'HelpEaseProMobile'@'%';
@@ -55,7 +59,7 @@ DROP TABLE IF EXISTS `litemall_address`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `litemall_address` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(63) NOT NULL DEFAULT '' COMMENT '收货人名称',
+  `name` varchar(63) NOT NULL DEFAULT '' COMMENT '求助人人名称',
   `user_id` int(11) NOT NULL DEFAULT '0' COMMENT '用户表的用户ID',
   `province` varchar(63) NOT NULL COMMENT '行政区域表的省ID',
   `city` varchar(63) NOT NULL COMMENT '行政区域表的市ID',
@@ -70,7 +74,7 @@ CREATE TABLE `litemall_address` (
   `deleted` tinyint(1) DEFAULT '0' COMMENT '逻辑删除',
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='收货地址表';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='求助地址表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -104,21 +108,21 @@ DROP TABLE IF EXISTS `litemall_aftersale`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `litemall_aftersale` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `aftersale_sn` varchar(63) DEFAULT NULL COMMENT '售后编号',
+  `aftersale_sn` varchar(63) DEFAULT NULL COMMENT '援助完成编号',
   `order_id` int(11) NOT NULL COMMENT '订单ID',
   `user_id` int(11) NOT NULL COMMENT '用户ID',
-  `type` smallint(6) DEFAULT '0' COMMENT '售后类型，0是未收货退款，1是已收货（无需退货）退款，2用户退货退款',
+  `type` smallint(6) DEFAULT '0' COMMENT '援助完成类型，0是未援助退款，1是已援助（无需再援助）退款，2用户再援助退款',
   `reason` varchar(31) DEFAULT '' COMMENT '退款原因',
   `amount` decimal(10,2) DEFAULT '0.00' COMMENT '退款金额',
   `pictures` varchar(1023) DEFAULT '[]' COMMENT '退款凭证图片链接数组',
   `comment` varchar(511) DEFAULT '' COMMENT '退款说明',
-  `status` smallint(6) DEFAULT '0' COMMENT '售后状态，0是可申请，1是用户已申请，2是管理员审核通过，3是管理员退款成功，4是管理员审核拒绝，5是用户已取消',
+  `status` smallint(6) DEFAULT '0' COMMENT '援助完成状态，0是可申请，1是用户已申请，2是管理员审核通过，3是管理员退款成功，4是管理员审核拒绝，5是用户已取消',
   `handle_time` datetime DEFAULT NULL COMMENT '管理员操作时间',
   `add_time` datetime DEFAULT NULL COMMENT '添加时间',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `deleted` tinyint(1) DEFAULT '0' COMMENT '逻辑删除',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='售后表';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='援助完成表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -130,16 +134,16 @@ DROP TABLE IF EXISTS `litemall_brand`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `litemall_brand` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL DEFAULT '' COMMENT '品牌商名称',
-  `desc` varchar(255) NOT NULL DEFAULT '' COMMENT '品牌商简介',
-  `pic_url` varchar(255) NOT NULL DEFAULT '' COMMENT '品牌商页的品牌商图片',
+  `name` varchar(255) NOT NULL DEFAULT '' COMMENT '援助团队名称',
+  `desc` varchar(255) NOT NULL DEFAULT '' COMMENT '援助团队简介',
+  `pic_url` varchar(255) NOT NULL DEFAULT '' COMMENT '援助团队页的援助团队图片',
   `sort_order` tinyint(3) DEFAULT '50',
-  `floor_price` decimal(10,2) DEFAULT '0.00' COMMENT '品牌商的商品低价，仅用于页面展示',
+  `floor_price` decimal(10,2) DEFAULT '0.00' COMMENT '援助团队的商品低价，仅用于页面展示',
   `add_time` datetime DEFAULT NULL COMMENT '创建时间',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `deleted` tinyint(1) DEFAULT '0' COMMENT '逻辑删除',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1046003 DEFAULT CHARSET=utf8mb4 COMMENT='品牌商表';
+) ENGINE=InnoDB AUTO_INCREMENT=1046003 DEFAULT CHARSET=utf8mb4 COMMENT='援助团队表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -598,7 +602,7 @@ CREATE TABLE `litemall_order` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL COMMENT '用户表的用户ID',
   `order_sn` varchar(63) NOT NULL COMMENT '订单编号',
-  `order_status` smallint(6) NOT NULL COMMENT '订单状态',
+  `order_status` smallint(6) NOT NULL COMMENT '订单状态（101：未付款）（102：取消）（103：已取消，系统）（201 支付完成）（301 商家发货）（401 用户确认收货）（当402系统自动确认收货以后）',
   `aftersale_status` smallint(6) DEFAULT '0' COMMENT '售后状态，0是可申请，1是用户已申请，2是管理员审核通过，3是管理员退款成功，4是管理员审核拒绝，5是用户已取消',
   `consignee` varchar(63) NOT NULL COMMENT '收货人名称',
   `mobile` varchar(63) NOT NULL COMMENT '收货人手机号',

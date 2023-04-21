@@ -1,5 +1,5 @@
 --
--- Host: 127.0.0.1    Database: litemall
+-- Host: 127.0.0.1    Database: HelpEaseProApp
 -- ------------------------------------------------------
 -- Server version	5.7.21-log
 
@@ -13,6 +13,10 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--  author                ：李文国
+
+--  Date: 26/02/2023 14:37:09
 
 
 
