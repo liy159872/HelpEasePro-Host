@@ -55,6 +55,24 @@ HelpEasePro是基于前后端分离，采用SpringCloud+Vue框架开发的基于
 
 ## HelpEasePro 部署流程
 
+### 项目特别说明（由于此项目上线，本地运行需要相关修改）
+如果此项目要使用内网穿透，或上线；需要进行以下操作：
+1、请修改HelpEPAppApi Spring Boot后段对应yml配置文件中地址server.address为对应IP
+2、请修改HelpEasePro-Mobile vue项目utils中request.js中的数据请求路径为对应IP
+3、请修改HelpEasePro-Mobile vue项目layout/Header.vue中的数据请求路径为对应IP
+4、请修改HelpEasePro-Mobile vue项目Me.vue中的数据请求路径为对应IP
+5、请修改HelpEasePro-App vue项目中user/tabbar-user-order.vue的数据请求路径为对应IP
+6、请修改HelpEasePro-App vue项目中user/user-information-set/index.vue的数据请求路径为对应IP
+
+同样的；如若只在本地运行；需要进行以下操作：
+1、请修改HelpEPAppApi Spring Boot后段对应yml配置文件中地址server.address为local host
+2、请修改HelpEasePro-Mobile vue项目utils中request.js中的数据请求路径为local host
+3、请修改HelpEasePro-Mobile vue项目layout/Header.vue中的数据请求路径为local host
+4、请修改HelpEasePro-Mobile vue项目Me.vue中的数据请求路径为local host
+5、请修改HelpEasePro-App vue项目中user/tabbar-user-order.vue的数据请求路径为local host
+6、请修改HelpEasePro-App vue项目中user/user-information-set/index.vue的数据请求路径为local host
+
+
 1. clone 项目到本地
    ###数据导入
 2. 在本地 MySQL 中创建一个空的数据库 HelpEasePro，在该数据库中运行提供的数据库脚本HelpEasePro.sql,完成表的创建和数据的导入。

@@ -69,6 +69,15 @@ HelpEasePro-App = Spring Boot后端 + Vue管理员前端 + 微信小程序用户
 * 配置管理
 * 统计报表
 
+### 项目特别说明（由于此项目上线，本地运行需要相关修改）
+如果此项目要使用内网穿透，或上线；需要进行以下操作：
+1、请修改Spring Boot后段对应yml配置文件中地址server.address为对应IP
+2、请修改vue项目utils中request.js中的数据请求路径
+同样的；如若只在本地运行；需要进行以下操作：
+1、请修改Spring Boot后段对应yml配置文件中地址server.address为local host
+2、请修改vue项目utils中request.js中的数据请求路径为local host
+
+
 ## 快速启动
 
 1. 配置最小开发环境：
