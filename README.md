@@ -7,7 +7,7 @@
 
 <p align="center"> 这个基于Spring+Vue前后端分离的社交化求助平台是一个针对大众的服务，它能够让用户在平台上发布求助信息，同时其他用户也可以看到并提供帮助。该平台提供了用户管理、求助信息发布、搜索、评论、点赞、通知等功能，可以让用户在社交化的环境下得到及时的帮助。它结合了现代社交化的特点，通过前后端分离的方式实现了良好的用户体验和易于维护的后端架构。 </p>
 
-<h2 align="center">HelpEasePro V04.0.0（毕业设计）</h2>
+<h2 align="center">HelpEasePro V04.1.0（毕业设计）</h2>
 
  [项目文档](https://)  | [笔记仓库](https:/)  |  [我的博客](https://blog.csdn.net/LetterLJHX?type=blog)  
 

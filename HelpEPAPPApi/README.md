@@ -131,11 +131,11 @@ HelpEasePro-App = Spring Boot后端 + Vue管理员前端 + 微信小程序用户
 
 ## 开发计划
 
-当前版本[v04.0.0](https://github.com/liy159872/HelpEasePro-Host)
+当前版本[v04.1.0](https://github.com/liy159872/HelpEasePro-Host)
 
 目前项目开发中，存在诸多不足，以下是目前规划的开发计划。
 
-V04.0.0 完成以下目标：
+V04.2.0 完成以下目标：
 
 1. 除了部分功能（如优惠券等），HelpEasePro-App的优化和改进基本结束；
 2. 管理后台基本实现所有表的CRUD操作；
