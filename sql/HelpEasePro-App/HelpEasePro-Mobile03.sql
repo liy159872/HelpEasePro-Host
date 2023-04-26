@@ -1141,7 +1141,8 @@ INSERT INTO `litemall_user` VALUES (1,'LJHX5470','$2a$10$EV6wRfP9CBvuh1vNyme1oeh
 (13,'CYN--1012','$2a$10$EV6wRfP9CBvuh1vNyme1oehJmxoSARcIx2G/Wn7dceEa/mlXH.JV2',1,NULL,'2023-03-27 21:24:02','0:0:0:0:0:0:0:1',0,'菜籽','18896222835','https://www.hualigs.cn/image/6411c2b72a775.jpg','','',0,'2023-03-27 21:24:02','2023-03-27 21:24:02',0),
 (14,'AZ15987255470','$2a$10$EV6wRfP9CBvuh1vNyme1oehJmxoSARcIx2G/Wn7dceEa/mlXH.JV2',1,'2002-01-06','2023-03-27 21:24:02','0:0:0:0:0:0:0:1',1,'李一','15987255470','https://www.hualigs.cn/image/6421878fd82a0.jpg','','',0,'2023-03-27 21:24:02','2023-03-27 21:24:02',0),
 (15,'lkylkx2426','$2a$10$pga..AlJLexQaojXznNgzevpSd842p9t9okUGdpX6/.OmFhcb.LDe',2,'2023-04-14 13:40:49','2023-03-27 21:24:02','0:0:0:0:0:0:0:1',0,'KY','15087865646','https://i.328888.xyz/2023/04/14/ixHjHZ.jpeg','','',0,'2023-03-27 21:24:02','2023-03-27 21:24:02',0),
-(16,'yiyi213199','$2a$10$8luyZQ1L7vOP9d3QYJdqke3hW8WCMa5Yo2TE2ktaXgxjsvQD8hI.W',1,'2023-04-22 22:40:49','2023-04-22 22:40:49','0:0:0:0:0:0:0:1',0,' 清影დ᭄ꦿ꧔ꦿ℘⸙','18987565397','https://i.328888.xyz/2023/04/22/i5RU5v.jpeg','','',0,'2023-04-22 22:40:49','2023-04-22 22:40:49',0);
+(16,'yiyi213199','$2a$10$8luyZQ1L7vOP9d3QYJdqke3hW8WCMa5Yo2TE2ktaXgxjsvQD8hI.W',1,'2023-04-22 22:40:49','2023-04-22 22:40:49','0:0:0:0:0:0:0:1',0,' 清影დ᭄ꦿ꧔ꦿ℘⸙','18987565397','https://i.328888.xyz/2023/04/22/i5RU5v.jpeg','','',0,'2023-04-22 22:40:49','2023-04-22 22:40:49',0),
+(17,'ForNiForever','$2a$10$.4lARPvolzTJz5coj6mrSOem3JJkk4GFv/FwMLunBTdynxfIbDImO',1,'2023-04-26 13:40:49','2023-04-26 21:24:02','0:0:0:0:0:0:0:1',0,'嶪','15697023725','https://www.hualigs.cn/image/6448ae206c01a.jpg','','',0,'2023-04-26 21:24:02','2023-04-26 21:24:02',0);
 /*!40000 ALTER TABLE `litemall_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
